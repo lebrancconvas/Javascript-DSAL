@@ -37,4 +37,4 @@ function Stack() {
 var WebStack = new Stack()
 WebStack.push("HTML")
 WebStack.push("CSS")
-console.log(WebStack.peek)
+console.log(WebStack.peek())
