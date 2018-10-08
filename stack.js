@@ -12,7 +12,6 @@ let palindrome = word => {
         stack.push(word[i])
     }
     
-    
     for (let i = 0 ; i < word.length ; i++) {
         reverseword += stack.pop()
     }
@@ -20,6 +19,7 @@ let palindrome = word => {
     if (word === reverseword) {
         return `${word} is palindrome`
     }
+    
     else {
         return `${word} is not palindrome`
     }
