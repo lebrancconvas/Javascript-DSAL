@@ -66,6 +66,13 @@ function mySet() {
         })
         return differenceset
     }
+
+    this.subset = function(otherset) {
+        let firstset = this.values()
+        return firstset.every(function(e) {
+            return otherset.has(e)
+        })
+    }
 }
 
 // create new object as a new set.
@@ -93,3 +100,4 @@ console.log(giftriddha.union(oneriddha))
 console.log(giftriddha.interception(oneriddha))
 console.log(giftriddha.difference(oneriddha))
 console.log(oneriddha.difference(giftriddha));
+console.log(oneriddha.subset(giftriddha))
