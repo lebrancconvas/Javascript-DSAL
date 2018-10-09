@@ -42,6 +42,18 @@ function mySet() {
         })
         return unionset
     }
+
+    this.interception = function(otherset) {
+        let interceptionset = new Set()
+        let firstset = this.values()
+        let secondset = otherset.values()
+        firstset.forEach(function(e) {
+            if(otherset.has(e)) {
+                interceptionset.add(e)
+            }
+        })
+        return interceptionset
+    }
 }
 
 // create new object as a new set.
@@ -66,3 +78,4 @@ oneriddha.add("Nack")
 
 // Display the union set of the first set and the second set.
 console.log(giftriddha.union(oneriddha))
+console.log(giftriddha.interception(oneriddha))
