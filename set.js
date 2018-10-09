@@ -1,4 +1,4 @@
-function Set() {
+function mySet() {
     let collection = []
 
     this.has = function(element) {
@@ -32,7 +32,37 @@ function Set() {
 
     this.union = function(otherset) {
         let unionset = new Set()
-        let firstset = this.values
-        // let secondset
+        let firstset = this.values()
+        let secondset = otherset.values()
+        firstset.forEach(function(e) {
+            unionset.add(e)
+        })
+        secondset.forEach(function(e) {
+            unionset.add(e)
+        })
+        return unionset
     }
 }
+
+// create new object as a new set.
+let giftriddha = new mySet()
+let oneriddha = new mySet()
+
+// Add Element on the first set.
+giftriddha.add("Pun")
+giftriddha.add("Pang")
+giftriddha.add("Ohm")
+giftriddha.add("Namtan")
+giftriddha.add("Wave")
+giftriddha.add("Claire")
+giftriddha.add("Korn")
+giftriddha.add("Mon")
+
+// Add Element on the second set.
+oneriddha.add("Namtan")
+oneriddha.add("Pun")
+oneriddha.add("Wave")
+oneriddha.add("Nack")
+
+// Display the union set of the first set and the second set.
+console.log(giftriddha.union(oneriddha))
