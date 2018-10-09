@@ -96,8 +96,8 @@ oneriddha.add("Wave")
 oneriddha.add("Nack")
 
 // Display the union set of the first set and the second set.
-console.log(giftriddha.union(oneriddha))
-console.log(giftriddha.interception(oneriddha))
-console.log(giftriddha.difference(oneriddha))
-console.log(oneriddha.difference(giftriddha));
+console.log(giftriddha.union(oneriddha).values())
+console.log(giftriddha.interception(oneriddha).values())
+console.log(giftriddha.difference(oneriddha).values())
+console.log(oneriddha.difference(giftriddha).values())
 console.log(oneriddha.subset(giftriddha))
