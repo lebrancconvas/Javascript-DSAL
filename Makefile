@@ -1,5 +1,6 @@
 stack:
-	node stack.js && node createStack.js
+	node stack.js
+	node createStack.js
 
 queue:
 	node queue.js
